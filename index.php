@@ -19,7 +19,7 @@
         <div id="container">
             <?php
                 try{
-                    $conn = new PDO("mysql:host=localhost;dbname=professores", 'root', '');
+                    $conn = new PDO("mysql:host=localhost;dbname=professores;charset=utf8", 'root', '');
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $sql = "Select * FROM descricao";
