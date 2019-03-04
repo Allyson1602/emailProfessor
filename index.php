@@ -30,7 +30,13 @@
                         foreach($dados as $dado){
             ?>
                 <a href="pages/usuario.php?id=<?php echo $dado['id']; ?>" class="box-professor">
-                    <i class="fas fa-user"></i>
+                    <?php
+                        if(empty($dado['arquivo'])){
+                            print("<i class='fas fa-user'></i>");
+                        }else{
+                            print("<img src='img/perfil/".$dado['arquivo'].".jpg' />");
+                        }
+                    ?>
                     <div class="descricao">
                         <p><?php echo $dado['nome']; ?></p>
                         <p><?php echo $dado['area']; ?></p>

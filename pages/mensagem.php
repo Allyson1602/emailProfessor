@@ -73,9 +73,9 @@
             }
 
             if($status == true){
-                print('email enviado com sucesso.');
+                print('Seu email para '.$_SESSION['nomeProf'].' foi enviado com sucesso.');
             }else{
-                print('erro ao enviar o email.');
+                print('Erro ao enviar o email para '.$_SESSION['nomeProf']);
             }
         ?>
         <a href="../index.php">voltar</a>

@@ -19,7 +19,7 @@
         <link href="img/logo.png" rel="shortcut icon" type="img/png" />
     </head>
     <body>
-        <form method="POST" action="mensagem.php">
+        <form method="POST" action="mensagem.php" name="formulario">
             <div id="box-nome">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" placeholder="seu nome" />
@@ -34,13 +34,15 @@
             </div>
             <div id="box-mensagem">
                 <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem"></textarea>
+                <textarea name="mensagem" id="mensagem"></textarea>
             </div>
             <div id="box-botao">
-                <button type="submit">enviar email</button>
+                <button type="submit" onclick="return verificar()">enviar email</button>
             </div>
         </form>
         <p>verifique se os dados foram digitados corretamente.</p>
         <a href="../index.php">voltar</a>
+
+        <script src="../js/main.js"></script>
     </body>
 </html>
